@@ -1,0 +1,185 @@
+@import url('https://fonts.cdnfonts.com/css/valentine');
+@import url('https://fonts.cdnfonts.com/css/iconified');
+
+body {
+    background: lightpink;
+    font-family: 'Valentine', sans-serif;
+}
+
+.center-container {
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#valentine {
+    height: 700px;
+    width: 800px;
+    display: inline-flex;
+    background: white;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border-radius: 100px;
+    box-shadow: 10px 8px 2px palevioletred;
+}
+#valentine h1{
+    width: auto;
+    height: auto;
+    margin-top: -10px;
+    font-size: 50px;
+    color: red;
+    animation: wiggle 2s linear infinite;
+}
+
+@keyframes wiggle {
+    0%, 7% {
+        transform: rotateZ(0);
+    }
+    15% {
+        transform: rotateZ(-15deg);
+    }
+    20% {
+        transform: rotateZ(10deg);
+    }
+    25% {
+        transform: rotateZ(-10deg);
+    }
+    30% {
+        transform: rotateZ(6deg);
+    }
+    35% {
+        transform: rotateZ(-4deg);
+    }
+    40%, 100% {
+        transform: rotateZ(0);
+    }
+}
+#valentine h2{
+    width: auto;
+    height: auto;
+    margin-top: 50px;
+    color: #ff474c;
+    font-size: 30px;
+}
+#img-container {
+    margin: 10px;
+    width: 300px;
+    height: 300px;
+    display: flex; /* Added to center the image inside the container */
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    overflow: hidden; /* Ensures that any part of the image that goes outside the bounds of the container is hidden */
+}
+
+#gif {
+    transition: opacity 0.5s ease-in-out;
+    opacity: 1;
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain; /* Adjust the image to maintain aspect ratio without stretching */
+}
+
+
+#Choices {
+    display: flex;
+    margin: 30px 0px 40px 0px;
+}
+
+button {
+    background-color: #04AA6D; /* Green */
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    margin: 10px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    border-radius: 20px;
+    transition-duration: 0.2s;
+    box-shadow: 2px 3px pink;
+
+}
+
+button:hover {
+    background-color: hotpink;
+    box-shadow: 3px 4px pink;
+}
+
+#password-container {
+    margin: 10px 0; /* Adjust as needed to match button margin */
+    display: none;
+    font-family: 'Iconified', sans-serif;
+    flex-direction: column;
+}
+
+#password-container input[type=password] {
+    width: 100%; /* Make the input fill the container */
+    padding: 10px; /* Adjust padding to match your buttons */
+    border: 1px solid #ccc; /* Adjust border style to match your buttons */
+    border-radius: 5px; /* Adjust to match your buttons, if they have rounded corners */
+    box-sizing: border-box; /* Ensure padding and border are included in the total width */
+
+}
+
+@keyframes zoomIn {
+    from {
+        transform: scale(0);
+        opacity: 0;
+    }
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+.zoom-in {
+    animation: zoomIn 0.5s forwards;
+}
+
+@keyframes shake {
+    0% { transform: translateX(0); }
+    25% { transform: translateX(-4px); }
+    50% { transform: translateX(4px); }
+    75% { transform: translateX(-4px); }
+    100% { transform: translateX(0); }
+}
+
+.shake {
+    animation: shake 0.5s ease-in-out;
+}
+
+.fade-out {
+    animation: fadeOut 2s ease forwards; /* Updated duration to 2s */
+}
+
+@keyframes fadeOut {
+    from { opacity: 1; }
+    to { opacity: 0; }
+}
+
+@keyframes zoomIn {
+    0% {
+        transform: scale(0.5); /* Start from a scaled-down state */
+        opacity: 0;
+    }
+    100% {
+        transform: scale(1); /* Scale up to normal size */
+        opacity: 1;
+    }
+}
+
+.zoom-in-text {
+    width: 100%;
+    top: 45%;
+    position: absolute;
+    font-size: 60px;
+    color: white;
+    text-align: center;
+    animation: zoomIn 3s ease forwards;
+}
+
